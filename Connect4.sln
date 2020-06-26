@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4", "Connect4\Connect4.csproj", "{E22B5B46-BDAE-4B11-B608-22A46DC762D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D7ED0DB0-A116-49E7-B520-8BD4DD86F2AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{9A8C2886-A0FB-4E1D-83F1-81781984F63F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E22B5B46-BDAE-4B11-B608-22A46DC762D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E22B5B46-BDAE-4B11-B608-22A46DC762D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E22B5B46-BDAE-4B11-B608-22A46DC762D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7ED0DB0-A116-49E7-B520-8BD4DD86F2AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7ED0DB0-A116-49E7-B520-8BD4DD86F2AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7ED0DB0-A116-49E7-B520-8BD4DD86F2AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7ED0DB0-A116-49E7-B520-8BD4DD86F2AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8C2886-A0FB-4E1D-83F1-81781984F63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8C2886-A0FB-4E1D-83F1-81781984F63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8C2886-A0FB-4E1D-83F1-81781984F63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8C2886-A0FB-4E1D-83F1-81781984F63F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
