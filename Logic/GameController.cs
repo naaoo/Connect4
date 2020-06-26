@@ -1,6 +1,7 @@
 ﻿using Data;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Permissions;
@@ -19,6 +20,8 @@ namespace Logic
         public int turns = 0;
         public Player turnPlayer;
         public int[,] comp = new int[7,8];
+        Connect4Entities entities = new Connect4Entities();
+        Stopwatch time = new Stopwatch();
 
         public void GetControllerParams(Action<int[,]> action, Action action1, Player p1, Player p2)
         {
@@ -26,7 +29,6 @@ namespace Logic
             updateTurnBox = action1;
             p1.color = Color.FromArgb(255, 128, 128);
             p2.color = Color.FromArgb(255, 255, 128);
-            
             p1.sign = 1;
             p2.sign = 2;
             player1 = p1;
@@ -47,10 +49,12 @@ namespace Logic
                 if (CheckWin())
                 {
                     MessageBox.Show("Congratulations!\nWinner: " + turnPlayer.name);
+                    EndProcess(turnPlayer.id);
                 }
                 if (CheckAllFilled())
                 {
                     MessageBox.Show("All fields are taken!\nUndecided...");
+                    EndProcess(0);
                 }
                 turns++;
                 ChangePlayer();
@@ -59,8 +63,22 @@ namespace Logic
             else
             {
                 MessageBox.Show("That column is completely filled\nPlease choose another");
-                // Todo: EndProcess
             }
+        }
+
+        private void EndProcess(int exitCode)
+        {
+            Player winner = turnPlayer;
+            Player loser = new Player();
+            if (turnPlayer == player1)
+            {
+                loser = player2;
+            }
+            else if (turnPlayer == player2)
+            {
+                loser = player1;
+            }
+            //Game game = new Game() { winner_id = winner.id, loser_id = loser.id, };
         }
 
         public void SetMark(int col)
